@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1 Bucles</title>
+</head>
+<body>
+
+    <script>
+        //contar desde 1 hasta 1000 pero solo salgan por pantalla los pares
+        //que podamos contar sea cual sea el número
+        var cantidad = parseInt(prompt('Dime hasta dónde quieres contar'))
+        var tipo = parseInt(prompt('¿Qué quieres par o impar?'))
+        var valorInicial = prompt('¿Por dónde quieres empezar?')
+        for (valorInicial; valorInicial <= cantidad; valorInicial++)
+            switch(tipo) {
+                case 'par':
+                if (valorInicial % 2 == 0) {
+                    console.log(valorInicial)
+                }
+                break
+                case 'impar':
+                if (valorInicial % 2 != 0) {
+                    console.log(valorInicial)
+                }
+                break
+            }
+
+    </script>
+</body>
+</html>

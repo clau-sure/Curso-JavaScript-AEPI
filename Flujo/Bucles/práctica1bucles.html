@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 5 bucles</title>
+</head>
+<body>
+    <script>
+        //quiero una aplicación que me permita pintar cuadrados o círculos, de cualquier ancho y cualquier color
+
+            var tipo = ""
+            do {
+            tipo =  prompt('Elige cuadrado o círculo')
+            var comprobar = tipo.toLowerCase()
+            } while (comprobar != "círculo" && comprobar != "cuadrado");
+            var numero = parseInt(prompt('dame el número de objetos que quieres pintar'))
+            var medida = parseInt(prompt('dame el tamaño de los objetos'))
+            var color = prompt('de qué color quieres que sean')
+            var orden = ""
+            do {
+            orden =  prompt('Elige si quieres que se ordenen hacia abajo o hacia la derecha')
+            var checkear = orden.toLowerCase()
+            } while (checkear != "hacia abajo" && checkear != "hacia la derecha");
+            var contenido = ''
+            
+
+            for (var i = 1; i <= numero; i++) {
+                if (tipo === 'círculos') {
+                    contenido += '<div style = "height: '+ medida +'px; width:'+ medida +'px; background-color: '+color+'; margin: 10px; border-radius: 50%"></div>';
+                }
+                else {
+                    contenido += '<div style = "height: '+ medida +'px; width:'+ medida +'px; background-color: '+color+'; margin: 10px"></div>';
+                }
+            }
+            if (orden === 'hacia la derecha') {
+                document.body.style.display="flex";
+            }
+            document.write(contenido);
+
+
+    </script>
+</body>
+</html>

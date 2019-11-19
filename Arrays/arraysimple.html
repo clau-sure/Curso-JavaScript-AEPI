@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array simple</title>
+</head>
+<body>
+    
+    <script>
+    //conjunto de elementos "casi siempre del mismo tipo de dato". Un listado finito que me permite almacenar información.
+    //simple: es lo que conocemos en otros lenguajes y en matemáticos como vector.
+
+    var listaAlumnos = new Array('Claudia', 'Mireia', 'Juan', 'Elena');
+    var listaHtml = "<ul>"
+
+    //lista se numera de 0 a n-1 siendo n la longitud del array.
+
+    for (var i = 0; i < listaAlumnos.length; i++) {
+        listaHtml += '<li>' + listaAlumnos[i] + '</li>'
+    }
+ 
+    listaHtml += '</ul>'
+    document.write(listaHtml);
+
+    </script>
+</body>
+</html>

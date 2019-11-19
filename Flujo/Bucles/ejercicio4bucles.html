@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4 Bucles</title>
+    </head>
+    <body>
+      
+        <script>
+            var numero = parseInt(prompt('dame el número de cuadrados que quieres pintar'))
+            var medida = prompt('dame el tamaño de los cuadrados')
+            var color = prompt('de qué color quieres que sean')
+            var contenido = ''
+            for (var i = 1; i <= numero; i++) {
+                contenido += '<div style = "height: '+ medida +'px; width:'+ medida +'px; background-color: '+color+'; margin: 10px"></div>';
+            }
+    
+            document.write(contenido)
+        </script>
+</body>
+</html>

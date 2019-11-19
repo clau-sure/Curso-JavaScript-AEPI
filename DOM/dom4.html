@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 4</title>
+</head>
+<body>
+    <header class="menu">
+        <p>Texto párrafo header</p>
+    </header>
+    <img 
+        src="https://www.cancats.net/wp-content/uploads/2014/10/cat-eating-a-broccoli-234.jpg">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In beatae id exercitationem natus laboriosam! Iure, beatae quisquam vel dolore laudantium veritatis soluta, deserunt vitae, laboriosam officia eum cupiditate sit tempora.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, aliquid velit, perspiciatis possimus id odit nihil omnis fuga nulla dolores libero mollitia temporibus deserunt quisquam maxime ea eius impedit sed?
+    </p>
+    <script>
+        var menu = document.getElementsByClassName ('menu')
+
+        //getElements me devuelve un Array siempre, en este caso de un único elemento
+        
+        //console.log(menu)
+
+        //console.log(menu[0])
+
+        var parrafos = menu[0].getElementsByTagName('p')
+
+        parrafos[0].innerText = 'Hola desde getElement'
+
+        //query selector
+
+        var menu2 = document.querySelectorAll('.menu p')
+
+        //querySelector me obtiene el primer objeto que cumple que es de esa clase, identificador o etiqueta
+
+        //querySelectorAll me devuelve una lista de objetos que cumplen que son de esa clase, identificador o etiqueta
+
+        //querySelector me permite utilizar herencia de css
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método Reverse</title>
+</head>
+<body>
+   
+    <script>
+        //darle la vuelta al array, el principio al fin. SI MODIFICA EL ARRAY PRINCIPAL
+        //var listaAnimales = new Array ('León', 'Tigre', 'Gato', 'Lince', 'Leopardo', 'Hiena', 'Coyote', 'Guepardo', 'Ñu');
+        //var listaAnimalesReverse = listaAnimales.reverse()
+        //console.log(listaAnimalesReverse)
+        //console.log(listaAnimales)
+
+        //Spread operator
+        var otraListaReverse = [...listaAnimales].reverse
+        console.log(listaAnimales)
+        console.log(otraListaReverse)
+    </script>
+</body>
+</html>

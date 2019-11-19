@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mireia</title>
+</head>
+<body>
+    
+        <script>
+        
+                var empleados = [
+                    {
+                        id: 1,
+                        nombre: 'Mireia',
+                    },
+                    {
+                        id: 2,
+                        nombre: 'Claudia',
+                    },
+                    {
+                        id: 3,
+                        nombre: 'Juan',
+                    }
+                ]
+        
+                function filtrarXid(pListaEmpleados, pId){
+                    for(empleado of pListaEmpleados){
+                        if(empleado.id == pId){
+                            return empleado;
+                        }
+                    }
+                }
+        
+                listaEmpleadosXid = new Array()
+                listaId = new Array(1,3)
+        
+                for(var i = 0; i < listaId.length; i++){
+                    listaEmpleadosXid.push(filtrarXid(empleados, listaId[i]))
+                }
+        
+                // for(var i = 0; i < listaId.length; i++){
+                //     var empleado = filtrarXid(empleados, listaId[i])
+                //     listaEmpleadosXid.push(empleado)
+                // }
+        
+                console.log(listaEmpleadosXid)
+        
+            </script>
+</body>
+</html>

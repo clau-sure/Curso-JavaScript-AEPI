@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="box-container">
+            <div class="box">
+                <p class="title">Lista de tareas</p>
+                <p class="subtitle">Añadir tarea:</p>
+                <input type="text" id="title">
+                <select name="" id="priority">
+                    <option value="Mensual">Mensual</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Urgente">Urgente</option>
+                </select>
+                <button id="button" class="btn btn-primary">Añadir tarea</button>
+            </div>
+            <div class="box">
+                <p class="subtitle">Filtrar por prioridad:</p>
+                <select id="priority-filter" class="select-class">
+                    <option selected>Seleccionar prioridad...</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Urgente">Urgente</option>
+                </select>
+                <button onclick="resetList()" class="btn btn-secondary">Reset</button>
+            </div>
+            <div class="box">
+                <p class="subtitle">Filtrar por título:</p>
+                <input type="text" class="text-input" id="keyword-filter" placeholder="Texto...">
+                </div>
+            <div class="box">
+                <div id="list">
+                    <!-- <div class="todo-box">
+                        <h1>mireia</h1>
+                        <h6>Priority: daily</h6>
+                        <button id="delete-button">Delete</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        var todosList = new Array()
+        var button = document.getElementById('button')
+        button.addEventListener('click', saveValues)
+
+        // Guardar valores
+        function saveValues(event) {
+            event.preventDefault()
+            const title = document.getElementById('title').value
+            const priority = document.getElementById('priority').value
+            addTodo(title, priority)
+        }
+
+        // Añadir a la lista
+        function addTodo(title, priority, id) {
+            const todo = {
+                title,
+                priority,
+                id: Date.now(),
+            }
+            todosList.push(todo)
+            showTodo(todo)
+        }
+
+        // Añadir al HTML
+        function showTodo(todo) {
+            const list = document.getElementById('list')
+            const div = document.createElement('div')
+
+            const h1 = document.createElement('h1')
+            const h6 = document.createElement('h6')
+            const text = document.createTextNode(`${todo.title}`)
+            const priority = document.createTextNode(`${todo.priority}`)
+
+            const deleteButton = document.createElement('button')
+            const textButton = document.createTextNode('x')
+
+            h1.appendChild(text)
+            h6.appendChild(priority)
+            deleteButton.appendChild(textButton)
+
+            div.appendChild(h1)
+            div.appendChild(h6)
+            div.appendChild(deleteButton)
+
+            div.classList.add('todo-box')
+            div.classList.add(`${todo.priority}`)
+            deleteButton.classList.add('button-class')
+            deleteButton.setAttribute('id', `${todo.id}`)
+            deleteButton.addEventListener('click', function (){
+                deleteButton.parentNode.remove()
+                todosList.findIndex(todo => todo.id === todo.id)
+                todosList.splice(todo, 1)
+            })
+            
+            console.log(todosList)
+
+            list.appendChild(div)
+        }
+
+        // Filtrado
+        var priorityFilter = document.getElementById('priority-filter')
+        priorityFilter.addEventListener('change', filterByPriority)
+
+        function filterByPriority(){
+            let priority = document.getElementById('priority-filter').value
+            filterTodosByPriority(priority)
+        } 
+
+        function filterTodosByPriority(priority){
+            const todosByPriority = todosList.filter(todo => todo.priority === priority)
+            const list = document.getElementById('list')
+            list.innerHTML = []
+
+            todosByPriority.forEach(todo => 
+            showTodo(todo)
+            )
+        }
+
+        // Filtrar por palabra
+        var keywordFilter = document.getElementById('keyword-filter')
+        keywordFilter.addEventListener('keypress', filterByKeyword)
+
+        function filterByKeyword(e){
+            if(e.keyCode == 13){
+                e.preventDefault()
+                var text = document.getElementById("keyword-filter").value
+                filterTodosByKeyword(text)
+            }
+            function filterTodosByKeyword(text){
+                var todosByKeyword = todosList.filter(todo => todo.title === text)
+                const list = document.getElementById('list')
+                list.innerHTML = []
+
+                todosByKeyword.forEach(todo => 
+                showTodo(todo)
+                )
+            }
+        }
+        
+
+        // Reset
+        function resetList(){
+            const list = document.getElementById('list')
+            list.innerHTML = []
+
+            todosList.forEach(todo => 
+            showTodo(todo)
+            )
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 2</title>
+</head>
+<body>
+    <ul id="menu"></ul>
+
+    <ul id="otromenu"></ul>
+
+    <script>
+        var listaSecciones = new Array ('home', 'Quienes somos', 'Galería')
+        var menu = document.getElementById('menu')
+        //menu.innerHTML = '<li>' + listaSecciones[0] + '</li>'
+        for(var i = 0; i < listaSecciones.length; i++) {
+            menu.innerHTML = '<li>'+ listaSecciones[i] +'</li>'
+        }
+
+        //opcion 2
+
+        var otromenu = document.getElementById('otromenu')
+
+        for (section of listaSecciones) {
+            otromenu.innerHTML += '<li>'+ section +'</li>'
+        }
+    </script>
+</body>
+</html>

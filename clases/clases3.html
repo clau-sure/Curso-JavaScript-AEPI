@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clases 3</title>
+</head>
+<body>
+    
+    <script>
+        class Tarea {
+            constructor (pTitulo = "", pPrioridad = "") {
+                this.titulo = pTitulo
+                this.prioridad = pPrioridad
+            }
+            anadirContenido(pTitulo, pPrioridad) {
+                this.titulo = pTitulo
+                this.prioridad = pPrioridad
+            }
+            eliminarTarea() {
+                this.titulo = ""
+                this.prioridad = ""
+            }
+        }
+        var listaTareas = new Array ()
+        var tarea1 = new Tarea ()
+        var tarea2 = new Tarea ('fregar los platos', 'urgente')
+        listaTareas.push(tarea2, tarea1)
+        tarea1.anadirContenido('limpiar arenero', 'moderado')
+        console.log(listaTareas)
+
+        class Articulo extends Tarea {
+            constructor (pTitulo = "", pPrioridad = "", pPrecio = "") {
+                super(pTitulo, pPrioridad)
+                this.precio = pPrecio
+            }
+            dameImporte(pCantidad) {
+                return this.precio * pCantidad
+            }
+        }
+
+        var leche = new Articulo ('leche desnatada', 'urgente', 1.25)
+        console.log(leche.titulo)
+
+        console.log(leche.dameImporte(15))
+
+    </script>
+</body>
+</html>

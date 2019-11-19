@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Concatenar Arrays</title>
+</head>
+<body>
+    
+    <script>
+        // me permite unir arrays
+        var verduras = new Array ('Lechuga', 'Pimiento', 'Guisante')
+
+        var carnes = new Array ('Ternera', 'Pollo', 'Cordero')
+
+        var pescados = new Array ('Salmón', 'Atún')
+
+        var listaCompra = new Array ()
+
+        //opción 1
+
+        listaCompra = carnes.concat(verduras, pescados)
+        console.log(listaCompra)
+
+        //opción 2
+
+        listaCompra = carnes.concat(verduras).concat(pescados)
+        console.log(listaCompra)
+
+        //opción 3
+
+        listaCompra3 = [...carnes,...verduras,...pescados]
+
+    </script>
+</body>
+</html>

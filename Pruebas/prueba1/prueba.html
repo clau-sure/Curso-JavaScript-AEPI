@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <title>Prueba</title>
+</head>
+<body>
+
+        <h2>Prueba de JavaScript</h2>
+        <p>Escribe una cantidad de segundos:</p>
+        <input type="text" id="rellenar">
+        <br>
+        <br>
+        <input type="submit" value="Enviar formulario" id="Boton">
+    </p>
+
+    <script>
+
+        var total = document.getElementById('rellenar').value;
+        console.log(total)
+        var horas = total / (60*60);
+        horas = parseInt (horas);
+        var resto = total % (60*60);
+        var minutos = resto / 60;
+        minutos = parseInt (minutos);
+        var segundos = resto % 60;
+
+        function calcular() {
+            document.write('En ' + total + ' hay ' + horas + ' horas, ' + minutos + ' minutos y ' + segundos + ' segundos.');
+        }
+
+        document.getElementById("Boton").addEventListener("click", calcular);
+       
+    </script>
+</body>
+</html>

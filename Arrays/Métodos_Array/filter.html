@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método filter</title>
+</head>
+<body>
+    
+    <script>
+        var listaNotas = new Array (
+            {
+                nombre : 'Juan',
+                nota : 7,
+            },
+            {
+                nombre : 'Mireia',
+                nota : 9,
+            },
+            {
+                nombre : 'Claudia',
+                nota : 9.5,
+            }
+        )
+
+        //filter busca elementos que cumplen una condicion concreta y los introduce en un array distinto si cumplen la condición
+
+        var listaAprobados = new Array ()
+        
+        listaAprobados = listaNotas.filter(function (pAlumno) {
+            return pAlumno.nota >= 5;
+        })
+
+        //arrow functions
+
+        listaAprobados = listaNotas.filter(pAlumno => pAlumno.nota > 5)
+
+        console.log(listaAprobados)
+
+    </script>
+</body>
+</html>

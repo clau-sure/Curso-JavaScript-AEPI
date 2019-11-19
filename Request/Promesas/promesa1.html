@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crear una promesa</title>
+</head>
+<body>
+    
+    <script>
+        //promise se utiliza para llamadas asíncronas
+        const aplicarDescuento = new Promise(
+            (resolve, reject) => {
+                setTimeout( () => {
+                    let descuento = true
+                    if (descuento) {
+                        resolve ('Descuento aplicado')
+                    }
+                    else {
+                        reject('No se pudo aplicar descuento')
+                    }
+                }, 3000)
+            }
+        )
+        aplicarDescuento
+        .then( resultado => {
+            //pinto el resultado
+            console.log(resultado)
+        })
+        .catch( error => {
+            console.log(error)
+        })
+    </script>
+</body>
+</html>

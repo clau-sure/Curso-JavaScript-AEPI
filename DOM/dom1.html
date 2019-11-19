@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 1</title>
+</head>
+<body>
+    <p><span>Juan</span></p>
+    <p><span>Pepe</span></p>
+    <p><span>Rocío</span></p>
+
+    <script>
+        var parrafos = document.getElementsByTagName('p')
+        console.log(parrafos[1].innerText)
+        parrafos[1].innerText = 'Lo que quieras poner'
+        parrafos[2].innerHTML = "<strong> Hola </strong>"
+
+        //innerText me devuelve o modifica el texto de una etiqueta
+
+        //innerHTML modifica el interior con texto en HTML
+
+        //outerHTML me devuelve el texto con la etiqueta exterior
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Prueba2</title>
+</head>
+<body>
+    <div class="container" >      
+    <h2>Hogwarts Quiz</h2>
+                <p>Elegir mi color favorito:</p>
+                <input type="radio" name="casaHogwarts" value="Griffindor">Rojo 
+                <input type="radio" name="casaHogwarts" value="Slytherin">Verde 
+                <input type="radio" name="casaHogwarts" value="Hufflepuf">Amarillo 
+                <input type="radio" name="casaHogwarts" value="Ravenclaw">Azul 
+                
+                <br> 
+                
+                <button type="button" onclick="mostrarValue()"> 
+                    Saber mi casa 
+                </button> 
+                
+                <br> 
+                
+                <div id="result"></div> 
+            </div>  
+                
+                <script> 
+                    function mostrarValue() { 
+                        var listadoInputs = document.getElementsByName('casaHogwarts'); 
+                        if(listadoInputs[0].checked){
+                        document.getElementById("result").innerHTML
+                        = "Mi casa es: "+listadoInputs[0].value; 
+                        }
+                        if(listadoInputs[1].checked){
+                        document.getElementById("result").innerHTML
+                        = "Mi casa es: "+listadoInputs[1].value; 
+                        }
+                        if(listadoInputs[2].checked){
+                        document.getElementById("result").innerHTML
+                        = "Mi casa es: "+listadoInputs[2].value; 
+                        }
+                        if(listadoInputs[3].checked){
+                        document.getElementById("result").innerHTML
+                        = "Mi casa es: "+listadoInputs[3].value; 
+                        }
+                    } 
+                </script> 
+            </body> 
+            </html>		
+            
+            <!-- for(i = 0; i < inputsSeleccionado.length; i++) { 
+                if(inputsSeleccionado[i].checked) 
+                document.getElementById("result").innerHTML
+                        = "Mi casa es: "+inputsSeleccionado[i].value; 
+            }  -->

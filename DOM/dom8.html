@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 8</title>
+</head>
+<body>
+    <ul id="categorias">
+        <!-- <li>
+            <span>$</span>
+            <a href="">COLOR</a>
+        </li> -->
+    </ul>
+
+    <script>
+        var listaCategorias = new Array ('color', 'peso', 'precio', 'marca');
+        var seccionCategorias = document.querySelector('#categorias')
+        function pintarCategorias (pLista) {
+            var contenidoHtml = ''
+            for (categoria of pLista) {
+                contenidoHtml += `<li>
+                                    <span>${i}</span>
+                                    <a href="">${categoria}</a>
+                                </li>`
+            }
+            seccionCategorias.innerHTML = contenidoHtml;
+        }
+        pintarCategorias(listaCategorias)
+    </script>
+</body>
+</html>

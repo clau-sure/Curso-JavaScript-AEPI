@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 7</title>
+</head>
+<body>
+    
+    <p class="parrafo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex iusto eveniet expedita odit porro, eos adipisci natus corporis libero. Magni commodi sint officiis esse aliquam, magnam hic nisi facilis nostrum.
+    </p>
+    <p class="parrafo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex iusto eveniet expedita odit porro, eos adipisci natus corporis libero. Magni commodi sint officiis esse aliquam, magnam hic nisi facilis nostrum.
+    </p>
+    <p class="parrafo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex iusto eveniet expedita odit porro, eos adipisci natus corporis libero. Magni commodi sint officiis esse aliquam, magnam hic nisi facilis nostrum.
+    </p>
+    <script>
+        //el 1 y el 3 texto blanco fondo negro y el 2 texto negro fondo blanco, todos con un padding de 10px
+        var parrafos = document.querySelectorAll('p')
+        for (var i = 0; i < parrafos.length; i++) {
+            parrafos[i].style.padding = '10px'
+            if (i%2!=0) {
+                parrafos[i].style.backgroundColor = 'black'
+                parrafos[i].style.color = 'white'
+            }
+        }
+    </script>
+</body>
+</html>

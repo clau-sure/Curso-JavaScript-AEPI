@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital La Princesa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Práctica 2/css/styles.css">
+</head>
+
+<body>
+    <h2>Buscador de pacientes del Hospital La Princesa</h2>
+    <div id="filtrarfecha">
+        <h5>Filtrar por edad</h5>
+        <label for="start">Edades comprendidas entre los:</label>
+        <input id="edad1" type="number">
+        <label for="start">Y los:</label>
+        <input id="edad2" type="number">
+        <button type="button" class="btn btn-dark" onclick="filtrar()">Buscar pacientes</button>
+        <button type="button" class="btn btn-secondary" onclick="clearData()">Borrar búsqueda</button>
+    </div>
+    <div id="filtrarenfermedad">
+        <h5>Filtrar por enfermedad</h5>
+        <select id="Enfermedad">
+            <option selected>Selecciona una dolencia</option>
+            <option value="Gripe">Gripe</option>
+            <option value="Embarazo">Embarazo</option>
+            <option value="Talasemia">Talasemia</option>
+            <option value="Alzheimer">Alzheimer</option>
+            <option value="Anemia">Anemia</option>
+            <option value="Artrosis">Artrosis</option>
+            <option value="Anginas">Anginas</option>
+            <option value="Depresión">Depresión</option>
+            <option value="Afonía">Afonía</option>
+            <option value="Faringitis">Faringitis</option>
+        </select>
+    </div>
+
+    <div id="filtrocombinado">
+            <h5>Filtro combinado</h5>
+            <label for="start">Edades comprendidas entre los:</label>
+            <input id="edadCom1" type="number">
+            <label for="start">Y los:</label>
+            <input id="edadCom2" type="number">
+            <select id="EnfermedadCom">
+                    <option>Gripe</option>
+                    <option>Embarazo</option>
+                    <option>Talasemia</option>
+                    <option>Alzheimer</option>
+                    <option>Anemia</option>
+                    <option>Artrosis</option>
+                    <option>Anginas</option>
+                    <option>Depresión</option>
+                    <option>Afonía</option>
+                    <option>Faringitis</option>
+                </select>
+            <button type="button" class="btn btn-dark">Buscar pacientes</button>
+        </div>
+        <hr>
+        <div id="content">
+            <!-- <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Claudia Belén Álvarez Arias</h5>
+                          <h6 class="card-text">Diagnóstico: Gripe</h6>
+                          <h6 class="card-text">Edad: 29</h6>
+                          <h6 class="card-text">Número de la Seguridad Social: 17</h6>
+                        </div>
+            </div> -->
+        </div>
+    <script src="js/content.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+</html>

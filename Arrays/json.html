@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json - array asociativo - maping</title>
+</head>
+<body>
+    
+    <script>
+    //existen listados que no tienen valor de posición y se manejan con el concepto clave: CLAVE : VALOR
+    var producto = {nombre : "Leche", precio: 6, tipo: "Desnatada", capacidad: 1.5, stock: true}
+
+    console.log(producto)
+
+    //nomenclatura de corchetes
+
+    console.log(producto['precio'])
+
+    //nomenclatura de punto LA MÁS COMÚN
+
+    console.log(producto.tipo)
+
+    for (clave in producto) {
+        document.write(clave + " : " + producto[clave] + '<br>')
+    }
+
+    </script>
+</body>
+</html>

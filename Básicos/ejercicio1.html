@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    
+    <script>
+        //dado 54321 segundos quiero que me calculéis la cantidad de horas minutos y segundos que hay en ese tiempo
+
+        var segundosTotales = prompt('Dame una cantidad de segundos');
+        alert(typeof (segundosTotales));
+        var horas = segundosTotales / (60*60);
+        horas = parseInt(horas)
+        console.log(horas)
+        var resto = segundosTotales % (60*60);
+        var minutos = resto / 60;
+        minutos = parseInt(minutos)
+        console.log(minutos)
+        var segundos = resto % 60;
+
+        document.write('En ' + segundosTotales + ' hay ' + horas + ' horas, ' + minutos + ' minutos y ' + segundos + ' segundos.');
+
+
+
+
+    </script>
+</body>
+</html>

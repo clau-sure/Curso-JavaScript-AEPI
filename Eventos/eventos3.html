@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 3</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-color="blue" data-posicion="100px">azul</li>
+        <li data-color="red" data-posicion="200px">rojo</li>
+        <li data-color="green" data-posicion="300px">verde</li>
+    </ul>
+
+    <script>
+
+        var botones = document.querySelectorAll('#menu li');
+
+        for (boton of botones) {
+            boton.addEventListener('click', capturarColor)
+        }
+
+
+
+        function capturarColor(event) {
+
+            var color = event.target.dataset.color;
+            var posicion = this.dataset.posicion
+            event.target.style.marginLeft = posicion;
+            cambiarColor(color);
+
+
+        }
+
+        function cambiarColor(pColor) {
+            document.body.style.backgroundColor = pColor;
+        }
+
+    </script>
+
+</body>
+
+</html>

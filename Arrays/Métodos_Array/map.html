@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método map</title>
+</head>
+<body>
+    
+
+    <script>
+        //El método map es un método que me permite crear un nuevo array en base a unas condiciones concretas dentro de una función anónima. SIN MODIFICAR EL ARRAY INICIAL
+        
+        var listaNumeros = new Array (1, 3, 5, 7, 9)
+
+        //quiero sacar una lista de números que sean el cuadrado de cada número
+
+        var listaCuadrados = listaNumeros.map(function (numero){
+            return numero**2;
+        })
+        console.log(listaCuadrados)
+
+        //reduce aplica una operación a todos los elementos del array dando como resultado un único valor 
+
+        var sumaNumeros = listaNumeros.reduce(function (total, numero) {
+            return total + numero
+        })
+
+        console.log ('reduce', sumaNumero)
+
+
+    </script>
+</body>
+</html>

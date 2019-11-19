@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        //el destructuring no es más que extraer de una forma más fácil elementos de un objeto.
+
+        const libro = {
+            edicion:{
+                nueva: 2,
+                antigua: 1
+            },
+            titulo: 'El Quijote',
+            autores: ['Don Quijote','Sancho Panza'],
+        }
+
+        let autores = libro.autores;
+
+        let ultimaEdicion = libro.edicion.nueva;
+
+        //destructuring
+
+        let {edicion, autores, titulo} = libro;
+
+        console.log(edicion)
+        console.log(autores)
+        console.log(titulo)
+
+        let {nueva} = edicion;
+        console.log(nueva)
+
+    </script>
+</body>
+</html>

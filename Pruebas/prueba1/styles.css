@@ -1,0 +1,38 @@
+body {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    color: tomato;
+}
+
+p {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+input {
+    font-size: 18px;
+    text-align: center;
+}
+
+#rellenar {
+    color:lightgrey;
+    font-style: italic;
+}
+
+#Boton {
+    font-weight:bold;
+    color:white;
+    background:tomato;
+    border:0px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+
+
+    
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1 arrays</title>
+</head>
+<body>
+    
+    <script>
+    var listaAnimales = new Array ('Perro', 'Gato', 'Serpiente')
+    var contador = 0;
+    for( animal of listaAnimales) {
+        var color = (contador % 2 == 0) ? 'red' : 'green';
+        document.write('<h1 style="color: '+color+'">' + animal + '</h1>')
+        contador++;
+    }
+    </script>
+</body>
+</html>

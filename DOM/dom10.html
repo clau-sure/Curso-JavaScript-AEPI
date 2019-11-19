@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 10</title>
+</head>
+<body>
+    <section id="productos">
+        <!-- <article id= 'articulo'>
+            <h2>Título del artículo</h2>
+            <p>Descripción del artículo</p>
+            <p>Precio: 250€</p>
+        </article> -->
+
+    </section>
+    <script>
+        var listaProductos = new Array ();
+        listaProductos = [
+            {
+                id: 1,
+                titulo: 'leche desnatada',
+                descripcion: 'leche desnatada pasteurizada',
+                precio: 2
+            },
+            {
+                id: 2,
+                titulo: 'pan integral',
+                descripcion: 'pan integral de centeno',
+                precio: 3.5
+            },
+            {
+                id: 3,
+                titulo: 'Fuet Casa Tarradellas',
+                descripcion: 'Espetec extra',
+                precio: 2.5
+            },
+        ]
+
+        var seccionProductos = document.querySelector('#productos')
+
+        function pintarUnProducto (pProducto) {
+            seccionProductos.innerHTML = += `<article id= '${pProducto}'>
+                                                <h2>${pProducto.titulo}</h2>
+                                                <p>${pProducto.descripcion}</p>
+                                                <p>Precio: ${pProducto.precio}€</p>
+                                            </article>`
+        }
+        listaProductos.forEach (producto => pintarUnProducto(producto))
+    </script>
+</body>
+</html>

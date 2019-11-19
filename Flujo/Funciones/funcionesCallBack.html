@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones de call back</title>
+</head>
+<body>
+    
+    <script>
+        //es una función que se recibe como parámetro de otra
+        function saludar (pNombre) {
+            console.log('Hola ' + pNombre);
+        }
+        function getUser () {
+            var nombre = "Pepe"
+            return nombre;
+        }
+
+        saludar(getUser());
+    </script>
+</body>
+</html>

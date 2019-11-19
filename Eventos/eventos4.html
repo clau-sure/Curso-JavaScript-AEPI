@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 4</title>
+    <style>
+        #cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button>Izquierda</button>
+    <button>Arriba</button>
+    <button>Abajo</button>
+    <button>Derecha</button>
+    <div id="cuadrado"></div>
+
+    <script>
+        var botones = document.querySelectorAll('button')
+        var cuadrado = document.getElementById ('cuadrado')
+
+        for (boton of botones) {
+            boton.addEventListener ('click', mover)
+        }
+
+        var movimientoX = 0
+        var movimientoY = 0
+
+        function mover (event) {
+            var movimiento = event.target.innerText
+            switch (movimiento) {
+                case 'Izquierda':
+                //me muevo a la izquierda
+                movimientoX -= 10;
+                cuadrado.style.marginLeft = movimientoX + 'px';
+                break;
+
+                case 'Derecha':
+                //me muevo a la derecha
+                movimientoX += 10;
+                cuadrado.style.marginLeft = movimientoX + 'px';
+                break;
+
+                case 'Arriba':
+                //me muevo a arriba
+                movimientoY -= 10;
+                cuadrado.style.marginTop = movimientoY + 'px';
+                break;
+
+                case 'Abajo':
+                //me muevo abajo
+                movimientoY += 10;
+                cuadrado.style.marginTop = movimientoY + 'px';
+                break;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

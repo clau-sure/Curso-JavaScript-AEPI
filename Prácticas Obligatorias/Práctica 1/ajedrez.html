@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajedrez</title>
+</head>
+<body>
+
+    <script>
+    // Hacer un tablero de ajedrez que tú puedas elegir el número de casillas y el tamaño de las casillas. El color de las casillas puede ser cualquiera.
+    // El objetivo del ejercicio es que cada vez que ejecutemos el html podamos crear un tablero nuevo con diferentes condiciones
+
+        var tamano = parseInt(prompt('Dame el tamaño que quieres que tenga cada casilla'))
+        var casillas = prompt ('Dame el número de casillas que quieres que haya en cada fila')
+        var contenido = ''
+
+        for (var x = 0; x < casillas; x++) {
+            contenido += '<div style="display: flex;">'
+            for (var y = 0; y < casillas; y++) {
+                var color = ((x+y)%2!=0) ? 'black' : '#e4e4e4'
+                contenido += '<div style="min-width: '+tamano+'px; min-height: '+tamano+'px; background-color: '+color+'; display: inline-block;"></div>'
+            }
+            contenido += '</div>'
+        }
+        document.write(contenido)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor #listaContactos
+{
+    width: 40%;
+    padding: 20px;
+    border-right: 2px solid black;
+    height: 100vh;
+}
+
+.contenedor #listaContactos ul{
+    list-style: none;
+}
+
+.contenedor #listaContactos ul a{
+    display: block;
+    background-color: tomato;
+}
+
+.contenedor #vistaContacto
+{
+    width:60%;
+    padding: 20px 50px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays multidimensionales</title>
+</head>
+<body>
+
+    <script>
+    //un array de arrays, array de vectores.
+    var aves = new Array('Aguila', 'Cuervo', 'Gavilán', 'Colibrí')
+    var felinos = new Array ('Eme', 'Javi', 'Brócoli', 'Kiwi')
+    var anfibios = new Array ('Anura', 'Sapo', 'Cocodrilo', 'Axolote')
+
+    var zoo = new Array ()
+
+    zoo = [aves, anfibios, felinos]
+
+
+    for (var i = 0; i < zoo.length; i++) {
+        for (var j = 0; j < zoo[i].length; j++) {
+            console.log(zoo[i][j])
+        }
+    }
+
+    for (especie of zoo) {
+        for (animal of especie) {
+            console.log(animal)
+        }
+    }
+
+    </script>
+</body>
+</html>

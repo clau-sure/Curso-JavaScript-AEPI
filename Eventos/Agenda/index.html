@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Agenda de contactos</title>
+</head>
+<body>
+    <form action="send.html" method="get" style="margin: 5% 5%">
+        <div>
+            <label>Nombre
+                <input type="text" id="nombre" placeholder="Introduce tu nombre">
+            </label>
+        </div>
+        <div>
+            <label>Teléfono
+                <input type="text" id="tel" placeholder="Introduce tu teléfono">
+            </label>
+        </div>
+        <input id="btn" type="submit" value="Guardar" class="btn btn-warning">
+    </form>
+    <hr>
+    <ul id="agenda">
+        <!-- <li><strong>Juan:</strong> 609932607</li> -->
+    </ul>
+    
+    <script src="../Agenda/js/agenda.js"></script>
+</body>
+</html>

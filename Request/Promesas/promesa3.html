@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promesa 3</title>
+</head>
+<body>
+    
+    <script>
+        const primeraPromesa = new Promise (resolve => {
+            setTimeout(() => {
+                resolve('promesa uno')
+            }, 1500);
+        })
+        const segundaPromesa = new Promise (resolve => {
+            setTimeout(() => {
+                resolve('promesa dos')
+            }, 3000);
+        })
+        const terceraPromesa = new Promise (resolve => {
+            setTimeout(() => {
+                reject('error fatal')
+            }, 1000);
+        })
+        
+        Promise.all([primeraPromesa, segundaPromesa, terceraPromesa])
+            .then(valores => console.log (valores))
+            .catch(error => console.log(error))
+
+    </script>
+</body>
+</html>

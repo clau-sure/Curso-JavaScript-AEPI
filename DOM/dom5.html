@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 5</title>
+</head>
+<body>
+    <section id="productos">
+        <article>
+            <h2>Producto 1</h2>
+        </article>
+        <article>
+            <h2>Producto 2</h2>
+        </article>
+        <article>
+            <h2>Producto 3</h2>
+        </article>
+
+    </section>
+    <script>
+        var articulos = document.querySelectorAll('#productos article')
+
+        articulos.forEach(function (articulo) {
+            var titulo = articulo.querySelector('h2')
+            titulo.innerText = titulo.innerText.toLowerCase()
+        })
+    </script>
+</body>
+</html>

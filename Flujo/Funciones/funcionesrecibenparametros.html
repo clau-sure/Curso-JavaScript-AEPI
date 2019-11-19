@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones que reciben parámetros</title>
+    <style>
+    .cuadrado {
+        width: 100px;
+        height: 100px;
+    }
+    </style>
+</head>
+<body>
+   
+    <script>
+        //cuando tengo parámetros optativos todos los parámetros obligatorios van primero
+        function pintarCuadrado (pColor, pRadio = "50") {
+            var cuadrado = '<div class="cuadrado" style="background-color: ' + pColor + '; border-radius: ' + pRadio + 'px"></div>'
+            document.write(cuadrado)
+        }
+        var color = "indigo";
+
+        pintarCuadrado(color);
+
+    </script>
+</body>
+</html>

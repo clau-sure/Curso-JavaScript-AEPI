@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método find</title>
+</head>
+<body>
+    
+    <script>
+        var listaNotas = new Array (
+            {
+                nombre : 'Juan',
+                nota : 7,
+            },
+            {
+                nombre : 'Mireia',
+                nota : 9,
+            },
+            {
+                nombre : 'Claudia',
+                nota : 9.5,
+            }
+        )
+
+        //find busca el primer elemento que cumpla una condición determinada
+
+        var primerSuspenso = listaNotas.find(buscarSuspenso(alumno));
+
+        function buscarSuspenso (pAlumno) {
+            return (pAlumno.nota < 5);
+        }
+
+        var primerSuspenso = listaNotas.find(function (pAlumno){ return (pAlumno.nota < 5)})
+
+        var primerSuspenso = listaNotas.find (pAlumno => pAlumno.nota < 5)
+    </script>
+</body>
+</html>

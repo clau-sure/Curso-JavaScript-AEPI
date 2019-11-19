@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .estilo-caja {
+            background-color: coral !important;
+            color: white;
+        }
+
+        #caja{
+            width: 100%;
+            padding: 25px;
+            font-size: 25px;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja">
+        Esto es un DIV.
+    </div>
+
+    <button onclick="cambiarColor()">Cambiar color</button>
+
+    <script>
+        function cambiarColor() {
+            var miCaja = document.getElementById("caja");
+            miCaja.classList.toggle("estilo-caja");
+        }
+    </script>
+</body>
+
+</html>

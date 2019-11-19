@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .triangulo{
+        width: 0px;
+        height: 0px;
+        border-left: 100px solid red;
+        border-bottom: 50px solid transparent;
+        border-top: 50px solid transparent; 
+    }
+    
+    </style>
+</head>
+<body>
+
+    <div class="triangulo"></div>
+    <script>
+
+    // Función que me permita crear una figura pasada por parámetro con un alto, ancho y color concretos
+
+    function crearFigura(pTipo, pAlto, pAncho, pColor = "red") {
+        var figura = "";
+        var alto;
+        var ancho;
+        var radio;
+        var borderLeft;
+        var borderBottom;
+        var borderTop;
+
+        switch(pTipo){
+            
+            case 'cuadrado': 
+            alto = pAlto
+            ancho = alto
+            color = pColor
+            radio = "0%"
+            triangulo = ''
+
+            break;
+
+            case 'circulo':
+            alto = pAlto
+            ancho = alto
+            color = pColor
+            radio = "50%"
+            triangulo = ''
+
+            break;
+
+            case 'rectangulo':
+            alto = pAlto
+            ancho = pAncho
+            color = pColor
+            radio = "0%"
+            triangulo = ''
+
+            break;
+
+            case 'triangulo':
+            alto = 0
+            ancho = 0
+            radio = "0%"
+            color = transparent;
+            triangulo = "border-bottom:"+pAlto+"px solid "+pColor+"; border-left: "+pAncho+"px solid transparent; border-right: "+pAncho+"px solid transparent;";
+            break;
+
+        }
+
+        figura = '<div style="background-color: '+color+'; width: '+ancho+'px; height: '+alto+'px; border-radius: '+radio+' margin: 10px;"></div>'
+
+        document.write(figura);
+
+    }
+
+    </script>
+    
+</body>
+</html>

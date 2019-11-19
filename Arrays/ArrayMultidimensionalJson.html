@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Multidimensional de Objetos Json</title>
+</head>
+<body>
+    
+    <script>
+        var listaAlumnos = new Array ()
+
+        var alumno1 = {
+            nombre: "Alicia",
+            edad: 31,
+            notamedia: 5
+        }
+        var alumno2 = {
+            nombre: "Laura",
+            edad: 32,
+            notamedia: 7.6
+        }
+        var alumno3 = {
+            nombre: "Marta",
+            edad: 31,
+            notamedia: 4
+        }
+        var alumno4 = {
+            nombre: "Mireia",
+            edad: 24,
+            notamedia: 9.5
+        }
+        var alumno5 = {
+            nombre: "Elena",
+            edad: 33,
+            notamedia: 8.2
+        }
+
+        listaAlumnos = [alumno1, alumno2, alumno4, alumno5, alumno3]
+
+
+        for (alumno of listaAlumnos) {
+            if (alumno.notamedia >=5) {
+                document.write(alumno.nombre + ": " + alumno.notamedia)
+            }
+        }
+
+        function filtrarAlumnosXedad (pListaAlumnos, pEdad, pComparacion = "mayor") {
+            for (alumno of pLista) {
+            if (alumno.edad > pEdad && pComparacion == "mayor") {
+                console.log (alumno);
+            }
+            else if (pComparacion =! "mayor") {
+                document.write(alumno)
+            }
+        }
+        }
+    </script>
+</body>
+</html>

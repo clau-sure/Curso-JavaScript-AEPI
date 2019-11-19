@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dowhile</title>
+</head>
+<body>
+    
+    <script>
+        //al menos se entra una vez en el bucle sí o sí. Haz el bucle mientras se cumpla la condición 
+        var nombre = ""
+        do {
+            nombre =  prompt ("dame un nombre")
+            var comprobar = parseInt (nombre)
+        } while (!isNaN(comprobar));
+        document.write(nombre);
+    </script>
+</body>
+</html>

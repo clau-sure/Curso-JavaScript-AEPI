@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promesa 2</title>
+</head>
+<body>
+    
+    <script>
+        const descargarUsuarios = new Promise (
+            (resolve, reject) => {
+                const url = 'https://jsonplaceholder.typicode.com/users'
+                var peticion = new XMLHttpRequest()
+                peticion.open('GET', url, true)
+                peticion.send()
+                //que me llegue => resolve
+                //que no me llegue => reject
+                peticion.onload = ()=>{
+                    if(peticion.status == 200 && peticion.readyState == 4) {
+                        resolve(JSON.parse(peticion.responseText))
+                    }
+                    else {
+                        reject(Error(peticion.statusText))
+                    }
+                }
+ 
+                //Error opcional por si no se cumple el evento
+                peticion.onerror = (error) => reject(error)
+            }
+        )
+        descargarUsuarios
+            .then(alumnos => pintarListado(alumnos))
+            .catch(pError => console.log('Hubo un error: ' + pError))
+
+        function pintarListado (pLista) {
+            for (alumno of pLista) {
+                document.body.innerHTML += '<p>' + alumno.name + '</p>'
+            }
+        }
+
+    </script>
+</body>
+</html>

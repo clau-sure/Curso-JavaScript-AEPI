@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase factura</title>
+</head>
+<body>
+    
+    <script>
+        class Factura {
+            constructor (pCliente, pFecha, pImporte, pImpuesto) {
+                this.fecha = pFecha
+                this.cliente = pCliente
+                this.importe = pImporte
+                this.impuesto = pImpuesto
+            }
+            dameImporte() {
+                let total = this.importe + (this.importe * this.impuesto)
+                return total
+            }
+            descuento(pDescuento) {
+                let total = this.importe - (this.importe * pDescuento)
+                return total
+            }
+        }
+
+        var factura1 = new Factura ('Zara', '07/11/2019', 5000, 0.21)
+        var factura2 = new Factura ('universidad rey juan carlos', '07/11/2019', 200000, 0)
+
+        console.log(factura1.dameImporte())
+        console.log(factura2.dameImporte())
+        console.log(factura1.descuento(0.15))
+    
+    </script>
+</body>
+</html>

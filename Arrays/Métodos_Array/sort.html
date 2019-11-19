@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método Sort</title>
+</head>
+<body>
+    
+    <script>
+    
+        //sort ordenar alfabeticamente y numéricamente Y MODIFICA EL ARRAY PRINCIPAL
+
+        var listaAnimales = new Array ('León', 'Tigre', 'Lince', 'Elefante', 'Aguila')
+
+        var listaOrdenada = new Array()
+
+        var listaTemporal = new Array ()
+
+        for (animal of listaAnimales) {
+            listaTemporal.push (animal.toLowercase())
+        }
+        listaOrdenada = listaTemporal.sort()
+
+        console.log(listaOrdenada)
+
+        //opción numeral
+
+        var listaNumeros = new Array (2,3,34,52,25,123, 12, 77, 47, 71, 17, 5443,1234)
+
+        var listaNumerosOrdenada = new Array ()
+
+        listaNumerosOrdenada = listaNumeros.sort(function (a, b){
+            return b-a //mayor a menor
+            return a-b //menor a mayor
+        })
+
+        console.log(listaNumerosOrdenada)
+
+    </script>
+</body>
+</html>

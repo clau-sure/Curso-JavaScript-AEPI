@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Método Splice</title>
+</head>
+<body>
+    
+    <script>
+    //Splice para eliminar. Marco la posición en la que quiero empezar como primer parámetro, el segundo parámetro me dice la cantidad de elementos que quiero  borrar desde el que he marcado. MODIFICA ARRAY INICIAL
+
+    var listaAnimales = new Array ('León', 'Tigre', 'Gato', 'Lince', 'Leopardo', 'Hiena', 'Coyote', 'Guepardo', 'Ñu');
+    var listaCortada = listaAnimales.splice(3,2)
+    console.log(listaCortada)
+    console.log(listaAnimales)
+
+    // Splice (n,s,valor) para añadir. N es la posición desde la que parto. S es la cantidad de elementos que elimino. Y valor es el literal o valor que meto en el array
+
+    listaAnimales.splice(1,1,'Pitón', 'Boa Constrictor')
+    
+    console.log(listaAnimales)
+    </script>
+</body>
+</html>

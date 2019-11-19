@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bucle While</title>
+</head>
+<body>
+    
+    <script>
+        var cantidad = 100;
+        var i = 1;
+        while (i <= cantidad) {
+            //console.log(i);
+            i++; //puedo elegir dónde poner el iterador si antes o después del console.log
+        }
+
+        //break parar totalmente el bucle
+        //continue lo paro esa vez sólo pero luego continúa
+
+        while (i <= cantidad) {
+            i++; 
+            if (i==10){
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

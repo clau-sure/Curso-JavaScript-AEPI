@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 11</title>
+</head>
+<body>
+    <section id="noticias">
+        <article>
+            <h2>Título</h2>
+            <p>Descripción</p>
+        </article>
+    </section>
+    <script>
+        var articulos = new Array ()
+        articulos = [
+            {
+                titulo : 'título de la noticia 1',
+                cuerpo : 'Noticia 1 lorem ipsum dolor sit amet consectetur adipisicing elit. At porro, molestias tempora magni, id harum fugiat obcaecati blanditiis inventore ea nemo, est odio enim perspiciatis corrupti. Obcaecati quaerat quis architecto.'
+            },
+            {
+                titulo : 'título de la noticia 2',
+                cuerpo : 'Noticia 2 lorem ipsum dolor sit amet consectetur adipisicing elit. At porro, molestias tempora magni, id harum fugiat obcaecati blanditiis inventore ea nemo, est odio enim perspiciatis corrupti. Obcaecati quaerat quis architecto.'
+            },
+        ]
+        contenido = ''
+        for (noticia of articulos) {
+            var article = document.createElement('article')
+            var tituloh2 = document.createElement ('h2')
+            var cuerpo = document.createElement ('p')
+
+            var textoTitulo = document.createTextNode (noticia.titulo)
+            var cuerpoTitulo = document.createTextNode (noticia,cuerpo)
+
+            tituloh2.appendChild(textoTitulo);
+            cuerpo.appendChild(cuerpoTitulo);
+
+            
+        }
+        var seccionNoticias = document.getElementById ('noticias')
+        
+        seccionNoticias.INNERHTML = contenido;
+
+    </script>
+</body>
+</html>
